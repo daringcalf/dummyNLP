@@ -142,31 +142,31 @@ def main():
                         plt.axis("off")
                         st.pyplot(fig)
 
-                st.write("")
-                st.write("")
-                st.info("Advanced Features")
+                # st.write("")
+                # st.write("")
+                # st.info("Advanced Features")
 
-                col3, col4 = st.columns(2)
+                # col3, col4 = st.columns(2)
 
-                with col3:
-                    with st.expander("Token & Lemmas"):
-                        st.write("T&K")
-                        processed_text_mid = str(
-                            nt.TextFrame(raw_text).remove_stopwords()
-                        )
-                        processed_text_mid = str(
-                            nt.TextFrame(processed_text_mid).remove_puncts()
-                        )
-                        processed_text_fin = str(
-                            nt.TextFrame(processed_text_mid).remove_special_characters()
-                        )
-                        tandl = text_analyzer(processed_text_fin)
-                        st.json(tandl)
-                with col4:
-                    with st.expander("Summarize"):
-                        st.success("Summarize")
-                        summary = summrize_text(raw_text)
-                        st.success(summary)
+                # with col3:
+                #     with st.expander("Token & Lemmas"):
+                #         st.write("T&K")
+                #         processed_text_mid = str(
+                #             nt.TextFrame(raw_text).remove_stopwords()
+                #         )
+                #         processed_text_mid = str(
+                #             nt.TextFrame(processed_text_mid).remove_puncts()
+                #         )
+                #         processed_text_fin = str(
+                #             nt.TextFrame(processed_text_mid).remove_special_characters()
+                #         )
+                #         tandl = text_analyzer(processed_text_fin)
+                #         st.json(tandl)
+                # with col4:
+                #     with st.expander("Summarize"):
+                #         st.success("Summarize")
+                #         summary = summrize_text(raw_text)
+                #         st.success(summary)
 
     if choice == "Translation":
         st.subheader("Translation")
